@@ -1,1 +1,56 @@
-hello world
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+</style>
+</head>
+<body>
+<script>
+function clicked_lock() {
+  document.getElementById("demo").innerText =
+  "Locked! Send this code to your customer so they can unlock it: 4830";
+}
+function clicked_unlock() {
+  document.getElementById("demo").innerText =
+  "Unlocked!"
+}
+</script>
+
+<h1 id="demo" onclick="myFunction()"></h1>
+<div>
+<button onclick=clicked_lock() class="button">Push here to lock this food safe!</button>
+</div>
+<div style="padding: 20px;">
+  Enter the unlock code:
+<input type="number">
+</input>
+</div>
+
+<div>
+<button onclick=clicked_unlock() class="button">Push here to unlock this food safe!</button>
+</div>
+</body>
+</html>
+
